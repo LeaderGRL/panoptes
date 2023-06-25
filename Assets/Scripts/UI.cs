@@ -15,6 +15,6 @@ public abstract class UI : MonoBehaviour, IDragHandler
 
     public void Close()
     {
-        Destroy(gameObject);
+        LeanTween.scale(gameObject, Vector3.zero, 0.2f).setEase(LeanTweenType.easeInBack);
     }
 }
